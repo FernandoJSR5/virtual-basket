@@ -1,0 +1,13 @@
+<form *ngIf="item" (submit)="saveItem()">
+  <label>Name</label>
+  <input type="text" [(ngModel)]="item.name" name="name">
+ 
+  <label>Description</label>
+  <input type="text" [(ngModel)]="item.description" name="description">
+ 
+  <label>Location</label>
+  <input type="text" [(ngModel)]="item.location" name="location">
+ 
+  <button type="submit">Save</button>
+  <a [routerLink]="['/']">Cancel</a>
+</form>

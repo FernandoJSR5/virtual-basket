@@ -1,0 +1,18 @@
+<div>
+	<!--<parties-form></parties-form> -->
+	<div class="row">
+		<div *ngFor="let item of items | async" class="col-sm-3">
+			<div class="card">
+		  	<img class="card-img-top" src="{{item.url}}" alt="Card image cap" style="width: 18.1rem;" height="230rem;">
+		  	<div class="card-block">
+		    	<h4 class="card-title">{{item.name}}</h4>
+			    <p class="card-text">{{item.excerpt}}.</p>
+			    <p class="card-text">{{item.station}}.</p>
+			    <a href="#" class="btn btn-primary">Add</a>
+			    <a href="#" class="btn btn-warning" [routerLink]="['/item', item._id]">Detail</a>
+			    <a href="#" class="btn btn-danger" (click)="removeItem(item)">Remove</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
