@@ -13,14 +13,12 @@ Meteor.publish('item', function(itemId: string) {
 function buildQuery(itemId?: string): Object {
   const isAvailable = {
     $or: [{
-      // party is public
       success: true
     }]
   };
  
   if (itemId) {
     return {
-      // only single party
       $and: [{
           _id: itemId
         },
