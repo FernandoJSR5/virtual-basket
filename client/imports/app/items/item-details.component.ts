@@ -52,7 +52,7 @@ export class ItemDetailsComponent implements OnInit, OnDestroy {
 
     Items.update(this.item._id, {
       $set: {
-        name: this.item.name
+        success: false
       }
     });
   }
@@ -64,6 +64,6 @@ export class ItemDetailsComponent implements OnInit, OnDestroy {
 
   canActivate() {
     const item = Items.findOne(this.itemId);
-    return (item && item.owner == Meteor.userId());
+      //return (item && item.owner == Meteor.userId());
   }
 }

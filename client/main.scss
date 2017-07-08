@@ -1,1 +1,30 @@
-@import "{}/node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+ 
+html, body {
+  height: 100%;
+}
+ 
+body {
+  background-color: #f8f8f8;
+  font-family: 'Muli', sans-serif;
+}
+ 
+.sebm-google-map-container {
+  width: 450px;
+  height: 450px;
+}
+ 
+.navbar {
+  background-color: #ffffff;
+  border-bottom: #eee 1px solid;
+  font-family: 'Muli', sans-serif;
+  a {
+    text-decoration: none !important;
+  }
+ 
+  .navbar-right-container {
+    position: absolute;
+    top: 17px;
+    right: 17px;
+  }
+}
